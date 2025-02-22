@@ -69,57 +69,65 @@
 			<figure>
 				<img src="./images/4_hh_data_bad.png" alt="">
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+                    Census data reports income by household, so to explore income distributions, I first examined household sizes. I noticed that the distribution of household sizes shares the odd distribution as the population data discussed in Figure 1, as evidenced by the direct linear correlation in the plot above. Boston is shown as having fewer family households than Franklin, while Quincy (which we know from Figure 1 should be the second most populated municipality) is shown as having a very low comparative population and number of family households. This discrepancy raises questions about the accuracy of the entire dataset, not just the population field.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="./images/5_hh_sizes.png" alt="">
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="./images/6_hh_sizes.png" alt="">
-				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+                    While the exact counts for each municipality in Figure 4 seemed questionable, the ratios appear accurate, and I will rely on them for household size and income data moving forward. The data aligns with what we would expect from a sum of all households in the given municipalities. There are more family households than non-family households, which is typical of suburban areas. Family sizes are most commonly 2, 3, or 4 people, rather than larger households, which aligns with the current average American family size. Similarly, non-family households are predominantly single-person, consistent with typical household trends. From this, we can calculate that the average household size in our dataset is 2.5.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="./images/8_counties!.png" alt="">
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+                    To facilitate a more meaningful analysis of the data, it was grouped by county rather than individual municipalities, allowing for clearer interpretation at a broader geographical scale. The six counties depicted on the map above provide a more practical framework for understanding regional patterns, avoiding the complexities and granular details of municipal-level data. Note that while most counties are comprised of 10+ municipalities, Suffolk county is primarily comprised of Boston.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="./images/9_Boston_is_poor.png" alt="">
+				<img src="./images/6_income_dist_by_county.png" alt="">
+				<figcaption>
+                    The above figure shows the county-level breakdown of household income, with household incomes represented by computed ranges. The range values were computed with references to the <a href="https://finance.yahoo.com/news/income-considered-poverty-level-2025-130046072.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAK_eA06WOXeoWLmzI7218XEvoUKt7Nj-rlipFljkSSOPvckeVvS93P3KVtNU6inMEJLOzr2AWqUmfzHIm37MksCRtyGQezHRBW0r8n4Zat3cEs5uCSltH3CYLt_4MkPaEJYwnV2otUweXw_mjUYnAsP0ko4_dlrPxokRZiOZabsJ " target"_blank">national poverty line</a>, the <a href="https://www.forbes.com/advisor/mortgages/cost-of-living-by-state/ " target"_blank">cost of living in Massachusetts</a>, the <a href="https://datacommons.org/place/geoId/25?utm_medium=explore&mprop=income&popt=Person&cpv=age,Years15Onwards&hl=en" target"_blank">Massachusetts median income</a>, and the  <a href="https://www.cnbc.com/2024/09/20/middle-class-incomes-by-state.html#:~:text=Over%201%20in%205%20households,Bureau%20American%20Community%20Survey%20data" target"_blank">top 20% of Massachusetts earners</a>. Suffolk County stands out with a notably higher proportion of households living below the poverty line compared to other counties. As Suffolk County aligns with Boston proper, the hub of both our rapid transit and bus networks, this could suggest correlations between household income and transit reliance. 				</figcaption>
+			</figure>
+
+            <!---
+			<figure>
+				<img src="" alt="">
 				<figcaption>
 				ENTER IMAGE CAPTION HERE.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="./images/10_MBTA_routes.png" alt="">
+				<img src="" alt="">
 				<figcaption>
 				ENTER IMAGE CAPTION HERE.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="./images/11_income_histogram_means_nothing.png" alt="">
+				<img src="" alt="">
 				<figcaption>
 				ENTER IMAGE CAPTION HERE.
 				</figcaption>
 			</figure>
+            -->
 		</section>
 
 		<section>
 			<h2>Summary</h2>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+			<p>In this data exploration activity, I examined Census data on population, household size, and household income. I also looked at MBTA route information to compare income and population distributions against transit availability. Several key takeaways emerged from the analysis:</p>
+
+            <p>First, the dataset appears to have some inconsistencies, or the metadata may be insufficient to properly interpret the data. Based on population sizes that don't align with easily verifiable real-world figures, I find the dataset difficult to trust. Similar discrepancies were noted in the household counts data.</p>
+                
+            <p>Second, transit in these municipalities largely follows a hub-and-spoke model, with Boston at the center. This structure is consistent with the population distribution. While there are areas that lack rapid transit access, the bus network is extensive and provides robust coverage across these areas.</p>
+                
+            <p>Finally, the data suggests that lower-income areas in Boston correlate with higher levels of transit availability, particularly rapid transit. This finding challenges the initial assumption I made in Question 3, that areas closer to the T would be more desirable and, therefore, dominated by higher-income residents. One possible explanation is that individuals with lower incomes are more reliant on public transit, while wealthier people may have the means to afford cars.</p>
+            
 		</section>
 	</main>
 
