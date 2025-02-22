@@ -1,13 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<!-- saved from url=(0056)https://vis-society.github.io/assignments/A2_report.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Vis &amp; Society Assignment 2</title>
+	<link rel="stylesheet" href="./style.css">
 </head>
-<body>
 
-    <p>Hello world!</p>
-    
-</body>
-</html>
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Erin Mitchell</strong> — <em>esmitch@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Transit-Oriented Development</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li><b>How does population density intersect with transit availability?</b>
+					<p>To answer this borad question, I chose to explore some more specific sub-questions:</p>
+					<ul>
+						<li>How is the population distributed in the Boston area?</li>
+						<li>How is the transportation network distributed?</li>
+						<li>How many people live in transit deserts in the Boston area? Specifically, are there areas with high population density and few transit options?</li>
+					</ul>
+					<p><b>Motivation:</b> The background reading <a href="https://www.worldbank.org/en/topic/transport/publication/transforming-the-urban-space-through-transit-oriented-development-the-3v-approach" target"_blank">Short Explainer on Transit-Oriented Development</a> emphasized clustering jobs, amenities, and services around transportation hubs. This made me curious about Boston's current urban layout and how well its population is served by transit.</p>
+				</li>
+		
+				<li><b>How does income intersect with transit availability?</b>
+					<p><b>Motivation:</b> The article from A1 <a href="https://apps.bostonglobe.com/2023/10/special-projects/spotlight-boston-housing/boston-towers-of-wealth/" target"_blank">Reckoning with Boston’s Towers of Wealth</a> discussed how luxury housing developers were required to build affordable housing, but chose to do so a mile and a half away. This sparked my curiosity about whether luxury housing tends to be closer to better transit options, while affordable housing is pushed farther out, with fewer transit options.</p>
+				</li>
+				
+				<li><b>Is there an income difference between areas with rapid transit access versus those served only by bus services?</b>
+					<p><b>Motivation:</b> From personal experience searching for apartments in Cambridge and assisting friends moving to the Boston area, I’ve found that transportation is often the key factor when choosing a place to live. People generally prefer the T over buses due to its reliability. This led me to wonder if neighborhoods with rapid transit access (like the T) tend to have higher income levels compared to those only served by bus transit.</p>
+				</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries &amp; Insights</h2>
+
+			<figure>
+				<img src="./images/1_pop_comparison.png" alt="">
+				<figcaption>
+                    During initial exploration, I found that the population values given in the dataset (Source: US 2010 Census) were not in units that made logical sense. Boston was listed as having a population of 1369, a value that does not align with the accurate population of Boston even when units are changed to represent hundreds or thousands of people. Additionally, Boston was shown as having a relatively similar population to Franklin, which did not match my intuition on the population distribution in Massachusetts. Conversely, <a href="https://en.wikipedia.org/wiki/List_of_municipalities_in_Massachusetts" target"_blank">data pulled from Wikipedia</a> appears to much more accurately match my expectations on municipality population, and is used in Figure 2.  
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/3_pop_density.png" alt="">
+				<figcaption>
+                    The map above visually represents municipal populations, with population size encoded through both point size and color for clarity. Densely populated areas are concentrated around Boston, with the city itself marked by a large red point. More sparsely populated municipalities are located further outward, beyond the urban sprawl and suburbs, extending into more rural regions. This type of population distribution suggests that a hub-and-spoke transit network might be used, with Boston at the center.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/10_MBTA_routes.png" alt="">
+				<figcaption>
+                    The map above displays the MBTA rapid transit and bus routes, with rapid transit shown in blue and bus routes in yellow. Both networks follow a hub-and-spoke model, centered on downtown Boston. However, the bus network is more interconnected and extends farther than the rapid transit system. Areas directly north and south of downtown Boston appear to be transit deserts when considering only rapid transit, yet are well-served by bus routes.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/4_hh_data_bad.png" alt="">
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/5_hh_sizes.png" alt="">
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/6_hh_sizes.png" alt="">
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/8_counties!.png" alt="">
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/9_Boston_is_poor.png" alt="">
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/10_MBTA_routes.png" alt="">
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/11_income_histogram_means_nothing.png" alt="">
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>WRITE FINAL SUMMARY HERE.</p>
+		</section>
+	</main>
+
+
+</body></html>

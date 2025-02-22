@@ -1,175 +1,130 @@
-:root{
-  --color-accent: oklch(70% 0.1529 274.24)
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.css"); */
+
+:root {
+	--color-neutral-95: hsl(220 10% 95%);
+	--color-neutral-90: hsl(220 10% 90%);
+	--color-neutral-80: hsl(220 10% 80%);
+	--color-neutral-70: hsl(220 10% 70%);
+	--color-neutral-60: hsl(220 10% 60%);
+	--color-neutral-50: hsl(220 10% 50%);
+	--color-neutral-40: hsl(220 10% 40%);
+	--color-neutral-30: hsl(220 10% 30%);
+	--color-neutral-20: hsl(220 10% 20%);
+	--color-neutral-10: hsl(220 10% 10%);
 }
 
 html {
-  accent-color: var(--color-accent, black);
+	font: 100%/1.5 system-ui;
+	counter-reset: figure;
+	background: var(--color-neutral-95);
+	max-width: min(75vw, 80em);
+	margin: 0 auto;
 }
 
-body {
-    /* Set line height to 1.5 times the font size
-       and use the OS’s UI font as the website font
-     */
-    font: 100%/1.5 system-ui;
-    max-width: 90ch;
-    margin-inline: auto;
-    padding: 5%;
-    padding-top: 0;
-   }
+/* Headings */
 
-nav {
-  display: flex;
-  margin-bottom: 2%;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+	font-weight: 600;
+	text-wrap: balance;
 }
 
-nav a {
-  flex: 15;
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  padding: 0.5em;
-}
-
-nav a:hover {
-  border-bottom-width: 0.4em;
-  border-bottom-style: solid;
-  border-bottom-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h)
-}
-
-.current{
-  font-weight: bold;
-  border-bottom-width: 0.4em;
-  border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
-}
-
-form {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1em;
-  font: inherit;
-}
-
-label {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-column: 1 / -1;
-  font: inherit;
-}
-
-button {
-  grid-column: 1 / -1;
-  font: inherit;
-}
-
-input{
-  font: inherit;
-}
-
-textarea{
-  font: inherit;
-}
-
-img {
-  max-width: 100%;
-}
-
-.projects{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em;
-}
-
-.projects h2 {
-  margin: 0;
+h1, h2 {
+	border-bottom: 1px solid var(--color-neutral-80);
+	padding-bottom: .2em;
 }
 
 h1 {
-  font-size: 400%;
-  line-height: 1.1;
+	margin-block: 1em .5rem;
+	font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+	font-weight: 800;
+
+	small {
+		display: block;
+		width: fit-content;
+		padding: .2em .5em;
+		margin-inline: auto;
+		color: white;
+		background: var(--color-neutral-40);
+		font-size: 40%;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
 }
 
-article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  text-wrap: balance;
+h2 {
+	font-size: 180%;
+	color: var(--color-neutral-30);
 }
 
-section p{
-  text-align: center;
+h3 {
+	font-size: 130%;
 }
 
-section li {
-  white-space: normal; /* Ensure text can wrap normally */
-  overflow: visible;
-  word-wrap: break-word; /* Allow long words to break if necessary */
+/* Lists */
+
+ul, ol {
+	padding-inline-start: 2em;
 }
 
-section h2{
-  text-align: center;
-  padding-bottom: 0px;
+li {
+	&::marker {
+		color: var(--color-neutral-40);
+	}
+
+	+ li {
+		margin-top: .2em;
+	};
 }
 
+/* Sectioning elements */
 
-.line{
-  border-top-width: 4px;
-  border-top-style: dotted;
-  border-top-color: oklch(from var(--color-accent) 90% 10% h);
-  padding-top: 5px;
+header {
+	padding-block: 1em;
+	text-align: center;
 }
 
-
-.experience {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em;
-  background-color: oklch(from var(--color-accent) 97% 5% h);
-  padding: 20px;
-  border-color: oklch(from var(--color-accent) 90% 10% h);
-  border-width: 4px;
-  border-style: solid;
-  border-radius: 15px;
-  margin-top: 1em;
+main {
+	background: white;
+	color: var(--color-neutral-20);
+	border-radius: 1rem;
+	padding: 0.1rem 2rem;
 }
 
-.experience .company{
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 1;
-  text-wrap: balance;
-  font-weight: bold;
+/* Figures */
+
+figure {
+	margin: 1em 0;
+	padding: .5rem;
+	margin-inline: -.5em;
+	border: 1px solid var(--color-neutral-80);
+	box-shadow: 0 .1em .2em var(--color-neutral-95);
+	text-align: center;
+	background: white;
+
+	> figcaption {
+		font: 500 75% var(--font-sans);
+		background: var(--color-neutral-95);
+		padding: .5rem;
+		margin: -.5rem;
+		margin-top: .5rem;
+		counter-increment: figure;
+		text-align: left;
+
+		&::before {
+			content: "Figure " counter(figure) ": ";
+			font-weight: bold;
+			color: var(--color-neutral-40);
+		}
+
+		a:not(:hover, :focus, :active) {
+			color: inherit;
+			text-decoration: underline;
+			text-decoration-color: color-mix(in lab, currentColor, transparent 70%);
+		}
+	}
 }
 
-.experience .title{
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 1;
-  text-wrap: balance;
-  text-align: center;
-  font-weight: bold;
-}
-
-.experience .date{
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 1;
-  text-wrap: balance;
-  text-align: right;
-  font-weight: bold;
-}
-
-.experience ul{
-    display: block; /* Remove grid display, this isn't necessary for lists */
-    grid-column: span 3;
-    overflow: visible;
-    padding-left: 1.5em; /* Add padding to the left for proper list item indentation */ 
-}
-
-.home{
-  text-align: center;
+img{
+	max-width: 100%;
 }
